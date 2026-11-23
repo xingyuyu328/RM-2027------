@@ -89,6 +89,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
      if (KN1==0)
      {
        angle+=15;
+       if (angle > 180.0f) angle = 180.0f;
+       if (angle < 0.0f)   angle = 0.0f;
        ccr=Servo_AngleToCCR(angle);
        doflag=1;
        Servo_SetAngle(angle);
@@ -100,6 +102,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       if (KN2==0)
       {
        angle-=15;
+        if (angle > 180.0f) angle = 180.0f;
+        if (angle < 0.0f)   angle = 0.0f;
         ccr=Servo_AngleToCCR(angle);
         doflag=1;
        Servo_SetAngle(angle);
