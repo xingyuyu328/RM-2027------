@@ -1,0 +1,25 @@
+﻿# ---- 构建产物：本机中间文件，不提交 ----
+build/
+cmake-build-*/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.su
+
+# ---- IDE ----
+.idea/
+.vscode/
+.cproject
+.project
+*.launch
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+
+# ---- 注意：.ioc 千万不要忽略！别人靠它看你怎么配的 ----
